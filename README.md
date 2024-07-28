@@ -1,1 +1,1 @@
-"# Device Energy Calculator" 
+"Device Energy Calculator" 
