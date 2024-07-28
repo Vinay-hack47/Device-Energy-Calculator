@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Power: Device Energy Calculator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Eco Power: Device Energy Calculator</h1>
+        <form id="deviceForm">
+            <label for="deviceName">Device Name:</label>
+            <input type="text" id="deviceName" required>
+            <label for="powerRating">Power Rating (W):</label>
+            <input type="number" id="powerRating" required>
+            <label for="usageHours">Usage Hours per Day:</label>
+            <input type="number" id="usageHours" required>
+            <label for="electricityCost">Electricity Cost per kWh ($):</label>
+            <input type="number" step="0.01" id="electricityCost" required>
+            <button type="button" onclick="addDevice()">Add Device</button>
+        </form>
+        <table id="deviceTable">
+            <thead>
+                <tr>
+                    <th>Device Name</th>
+                    <th>Power Rating (W)</th>
+                    <th>Usage Hours</th>
+                    <th>Electricity Cost ($/kWh)</th>
+                    <th>Daily Consumption (kWh)</th>
+                    <th>Monthly Consumption (kWh)</th>
+                    <th>Yearly Consumption (kWh)</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Device rows will be added here dynamically -->
+            </tbody>
+        </table>
+        
+        <button onclick="exportToCSV()">Export to CSV</button>
+        <button onclick="exportToExcel()">Export to Excel</button>
+        <button onclick="exportToPDF()">Export to PDF</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
